@@ -48,6 +48,7 @@ description: 提供 30+ 专业设计风格提示词，包含完整的 UI 设计�
 | 27 | Neumorphism | `neumorphism` | 白 | 新拟物主义，柔和凸起效果 |
 | 28 | Organic | `organic` | 白 | 有机形态，自然流动 |
 | 29 | Maximalism | `maximalism` | 白 | 极繁主义，丰富多彩 |
+| 30 | Glassmorphism | `glassmorphism` | 白 | 玻璃拟态，半透明模糊效果 |
 
 ## 使用方法
 
