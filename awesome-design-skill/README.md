@@ -56,6 +56,8 @@
 /awesome-design-skill list
 ```
 
+![命令运行效果](assets/Command%20Schematic.png.png)
+
 ### 查看特定风格详情
 
 ```
