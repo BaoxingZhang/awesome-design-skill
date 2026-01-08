@@ -1,6 +1,6 @@
 ---
 name: awesome-design-skill
-description: 提供 30+ 专业设计风格提示词，包含完整的 UI 设计规范、示例代码和参考截图
+description: 提供 30+ 专业设计风格提示词 + 设计原则指南，包含完整的 UI 设计规范、示例代码和参考截图
 ---
 
 # /awesome-design-skill
@@ -50,6 +50,17 @@ description: 提供 30+ 专业设计风格提示词，包含完整的 UI 设计�
 | 29 | Maximalism | `maximalism` | 白 | 极繁主义，丰富多彩 |
 | 30 | Retro | `retro` | 白 | 复古风格，怀旧美学 |
 
+## 设计原则
+
+本 Skill 包含设计原则指南，作为所有设计风格的基础：
+
+| 原则 | 类型 | 描述 |
+|------|------|------|
+| General Design Principles | 理论指导 | 布局、层次、一致性、可读性等 10 个通用原则 |
+| Refactoring UI Principles | 实战技巧 | 从零开始、层次、间距、色彩等 8 个重构原则 |
+
+**注意**：设计原则会在应用任何设计风格时自动加载，作为风格未指定方面的默认规则。
+
 ## 使用方法
 
 ### 基本用法
@@ -96,12 +107,25 @@ description: 提供 30+ 专业设计风格提示词，包含完整的 UI 设计�
    - 读取 `design-styles/<风格名称>/example.html` 获取示例代码
    - 如果存在 `screenshots/<风格名称>.png`，向用户展示参考图
 
-3. **应用设计风格**
+3. **自动加载通用设计原则**
+   - 同时读取 `principles/general-design.md` 和 `principles/refactoring-ui.md`
+   - 将通用原则作为设计风格的补充和默认规则
+
+4. **应用设计风格**
    - 将设计提示词作为上下文应用到当前任务
    - 参考示例 HTML 的实现方式
    - 确保生成的代码/设计符合该风格规范
 
-4. **处理无效输入**
+5. **设计原则继承机制**
+   当应用设计风格时，遵循以下优先级：
+   - **风格特定原则优先**：风格 prompt.md 中明确指定的规则优先执行
+   - **通用原则回退**：风格未提及的方面，使用通用设计原则
+
+   示例：
+   - Monochrome 风格指定"纯黑白、无阴影" → 使用风格特定原则
+   - Monochrome 未指定"可访问性标准" → 回退到通用原则的 4.5:1 对比度
+
+6. **处理无效输入**
    - 如果风格名称不存在，提示用户并显示可用风格列表
    - 如果没有提供参数，询问用户想要使用哪种风格
 
@@ -110,16 +134,18 @@ description: 提供 30+ 专业设计风格提示词，包含完整的 UI 设计�
 ```
 awesome-design-skill/
 ├── SKILL.md                    # 主 Skill 文件
-├── screenshots/                # 所有风格截图集中存放（便于预览选择）
+├── screenshots/                # 所有风格截图集中存放
 │   ├── monochrome.png
 │   ├── bauhaus.png
-│   ├── modern-dark.png
 │   └── ... (以风格名称命名)
-├── thumbnails/                # 所有风格缩略（便于预览选择）
+├── thumbnails/                # 所有风格缩略图
 │   ├── monochrome.png
 │   ├── bauhaus.png
-│   ├── modern-dark.png
 │   └── ... (以风格名称命名)
+├── principles/                 # 设计原则目录
+│   ├── README.md               # 原则索引说明
+│   ├── general-design.md       # 通用设计原则（理论指导）
+│   └── refactoring-ui.md       # UI 重构原则（实战技巧）
 └── design-styles/              # 各风格详细内容
     ├── monochrome/
     │   ├── prompt.md           # 完整设计提示词（含 YAML 元数据）
