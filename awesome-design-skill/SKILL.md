@@ -115,6 +115,11 @@ awesome-design-skill/
 │   ├── bauhaus.png
 │   ├── modern-dark.png
 │   └── ... (以风格名称命名)
+├── thumbnails/                # 所有风格缩略（便于预览选择）
+│   ├── monochrome.png
+│   ├── bauhaus.png
+│   ├── modern-dark.png
+│   └── ... (以风格名称命名)
 └── design-styles/              # 各风格详细内容
     ├── monochrome/
     │   ├── prompt.md           # 完整设计提示词（含 YAML 元数据）
