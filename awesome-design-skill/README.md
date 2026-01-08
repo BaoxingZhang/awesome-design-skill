@@ -2,6 +2,8 @@
 
 一个包含 **30+ 专业设计风格提示词**的 Claude Code Skill，可快速应用到 UI/UX 设计和前端开发项目中。
 
+> **免责声明**：本 Skill 中的设计风格提示词来源于 [designprompts.dev](https://www.designprompts.dev/)，由 Twitter/X 用户 [@0xbisc](https://twitter.com/0xbisc) 创建并分享。本项目仅为将这些优秀的设计提示词整理为 Claude Code Skill 格式，以便于在开发工作中使用。所有设计内容的版权归原作者所有。
+
 ## 概述
 
 此 Skill 提供了一系列精心策划的设计风格提示词，每种风格都包含：
@@ -139,10 +141,17 @@ awesome-design-skill/
 
 ## 注意事项
 
-- 每种风格的提示词来源于 https://www.designprompts.dev/
+- 每种风格的提示词来源于 [designprompts.dev](https://www.designprompts.dev/)
 - 示例 HTML 文件展示了该风格的典型实现方式，可作为开发参考
 - 截图仅作为视觉参考，具体实现请以提示词为准
 - 建议根据项目需求选择合适的风格，不要混用冲突的风格
+
+## 致谢
+
+本 Skill 的设计风格内容基于以下来源：
+
+- **[designprompts.dev](https://www.designprompts.dev/)** - 由 [@0xbisc](https://twitter.com/0xbisc) 创建的设计提示词集合
+- 感谢原作者分享这些优秀的设计资源
 
 ## 许可证
 
