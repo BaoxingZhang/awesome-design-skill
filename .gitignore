@@ -9,3 +9,6 @@ temp/
 
 # IDE
 .idea/
+
+# Development guide
+SKILL-DEVELOPMENT-GUIDE.md
