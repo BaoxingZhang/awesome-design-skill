@@ -2,4 +2,10 @@
 .DS_Store
 
 # Claude local settings
-.claude/settings.local.json
+.claude/
+
+# temp directory
+temp/
+
+# IDE
+.idea/
